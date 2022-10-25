@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:project1/splash.dart';
+import 'package:project1/login.dart';
 
 class signup extends StatelessWidget {
   const signup({Key? key}) : super(key: key);
@@ -73,7 +73,7 @@ class signup extends StatelessWidget {
                 ),
                 TextButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>home()));
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>home()));
                     },
                     child: Text('LOGIN',
                         style: TextStyle(

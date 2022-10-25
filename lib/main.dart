@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:project1/entryscreen.dart';
 import 'package:project1/signup.dart';
-import 'package:project1/splash.dart';
+import 'package:project1/login.dart';
 
 void main() {
   runApp(MaterialApp(

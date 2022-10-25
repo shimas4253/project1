@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project1/signup.dart';
-import 'package:project1/splash.dart';
+import 'package:project1/login.dart';
 
 class entry extends StatelessWidget {
   const entry({Key? key}) : super(key: key);

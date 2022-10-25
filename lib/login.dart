@@ -9,9 +9,9 @@ class home extends StatefulWidget {
 }
 
 class _homeState extends State<home> {
+  bool hidpass=true;
   @override
   Widget build(BuildContext context) {
-    bool showpass = true;
     return Scaffold(
         appBar: AppBar(
           title: Text('LOGIN PAGE'),
@@ -38,12 +38,25 @@ class _homeState extends State<home> {
                       )),
                 ),
               ),
-              const Padding(
+               Padding(
                 padding: EdgeInsets.all(15.0),
                 child: TextField(
-                  obscureText: true,
+                  obscureText: hidpass,
                   obscuringCharacter: '*',
                   decoration: InputDecoration(
+                    suffixIcon: IconButton(
+                      onPressed: (){
+                        setState((){
+                          if(hidpass){
+                            hidpass=false;
+                          }else{
+                            hidpass=true;
+                          }
+                        });
+                      },
+                      icon: hidpass ? Icon(Icons.visibility) : Icon(Icons.visibility_off)
+                    ),
+                    prefixIcon:Icon(Icons.password_outlined) ,
                       label: Text('password'),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(16)),
@@ -55,7 +68,7 @@ class _homeState extends State<home> {
                 child: ElevatedButton(onPressed: () {}, child: Text("Login")),
               ),
               TextButton(
-                  onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context)=>signup()));}, child: Text('not a user?register here'))
+                  onPressed: () {Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>signup()));}, child: Text('not a user?register here'))
             ],
           ),
         ));
