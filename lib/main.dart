@@ -1,6 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:project1/entryscreen.dart';
+import 'package:project1/signup.dart';
 import 'package:project1/splash.dart';
 
 void main() {
@@ -9,7 +11,6 @@ void main() {
     home: Splash(),
   ));
 }
-
 
 class Splash extends StatefulWidget {
   @override
@@ -20,9 +21,11 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     Timer(Duration(seconds: 5), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> home()));
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => entry()));
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,15 +33,15 @@ class _SplashState extends State<Splash> {
         decoration: const BoxDecoration(
             image: DecorationImage(
           fit: BoxFit.fill,
-          image: NetworkImage(
-              "https://mir-s3-cdn-cf.behance.net/project_modules/disp/496ecb14589707.562865d064f9e.png"),
+          image: AssetImage(
+              "assets/images/backgroundimage.jpg"),
         )),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
               // Image.asset('assets/images/phone.png'),//fetching image
-              Image(image: AssetImage('assets/images/phone.png')),
+              Image(image: AssetImage('assets/images/study.png'),height: 50,width: 50,),
               Text(
                 'Myapp',
                 style: TextStyle(fontSize: 40, color: Colors.black),
