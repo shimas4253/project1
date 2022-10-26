@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project1/signup.dart';
+import 'package:project1/validation.dart';
 
 class home extends StatefulWidget {
   const home({Key? key}) : super(key: key);
@@ -31,7 +32,7 @@ class _homeState extends State<home> {
                 padding: EdgeInsets.all(15.0),
                 child: TextField(
                   decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.account_circle),
+                      prefixIcon: Icon(Icons.account_circle,color: Colors.black87,),
                       label: Text('username'),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(16)),
@@ -56,7 +57,7 @@ class _homeState extends State<home> {
                       },
                       icon: hidpass ? Icon(Icons.visibility) : Icon(Icons.visibility_off)
                     ),
-                    prefixIcon:Icon(Icons.password_outlined) ,
+                    prefixIcon:Icon(Icons.lock,color: Colors.black87,) ,
                       label: Text('password'),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(16)),
@@ -68,7 +69,7 @@ class _homeState extends State<home> {
                 child: ElevatedButton(onPressed: () {}, child: Text("Login")),
               ),
               TextButton(
-                  onPressed: () {Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>signup()));}, child: Text('not a user?register here'))
+                  onPressed: () {Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>validation()));}, child: Text('not a user?register here'))
             ],
           ),
         ));

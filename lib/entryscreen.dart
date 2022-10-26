@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project1/signup.dart';
 import 'package:project1/login.dart';
+import 'package:project1/validation.dart';
 
 class entry extends StatelessWidget {
   const entry({Key? key}) : super(key: key);
@@ -32,7 +33,7 @@ class entry extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => home()));
+                    context, MaterialPageRoute(builder: (context) => validation()));
               },
               child: Text(
                 'Login',

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project1/login.dart';
+import 'package:project1/validation.dart';
 
 class signup extends StatelessWidget {
   const signup({Key? key}) : super(key: key);
@@ -29,6 +30,7 @@ class signup extends StatelessWidget {
               padding: EdgeInsets.all(20.0),
               child: TextField(
                 decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.email,color: Colors.black87,),
                     label: Text('Email'),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(10)))),
@@ -38,6 +40,7 @@ class signup extends StatelessWidget {
               padding: EdgeInsets.all(20.0),
               child: TextField(
                 decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.lock,color: Colors.black87,),
                     label: Text('password'),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(10)))),
@@ -47,6 +50,7 @@ class signup extends StatelessWidget {
               padding: EdgeInsets.all(20.0),
               child: TextField(
                 decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.lock,color: Colors.black87,),
                     label: Text('confirm password'),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(10)))),
@@ -73,7 +77,7 @@ class signup extends StatelessWidget {
                 ),
                 TextButton(
                     onPressed: () {
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>home()));
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>validation()));
                     },
                     child: Text('LOGIN',
                         style: TextStyle(
