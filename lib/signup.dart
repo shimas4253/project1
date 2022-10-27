@@ -29,6 +29,7 @@ class signup extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.all(20.0),
               child: TextField(
+                textInputAction: TextInputAction.next,
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.email,color: Colors.black87,),
                     label: Text('Email'),
@@ -39,6 +40,7 @@ class signup extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.all(20.0),
               child: TextField(
+                textInputAction: TextInputAction.next,
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.lock,color: Colors.black87,),
                     label: Text('password'),
@@ -49,6 +51,7 @@ class signup extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.all(20.0),
               child: TextField(
+                textInputAction: TextInputAction.next,
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.lock,color: Colors.black87,),
                     label: Text('confirm password'),
