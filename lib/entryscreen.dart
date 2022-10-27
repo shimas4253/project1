@@ -5,12 +5,12 @@ import 'package:project1/login.dart';
 import 'package:project1/validation.dart';
 
 class entry extends StatelessWidget {
-  const entry({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
+        body:
+        SingleChildScrollView(
       child: Column(
         children: [
           const Padding(
@@ -32,8 +32,8 @@ class entry extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             child: ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => validation()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => validation()));
               },
               child: Text(
                 'Login',
@@ -47,21 +47,24 @@ class entry extends StatelessWidget {
                   minimumSize: MaterialStateProperty.all(Size(350, 50))),
             ),
           ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => signup()));
-            },
-            child: Text(
-              'sign up',
-              style: TextStyle(color: Colors.black),
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => signup()));
+              },
+              child: Text(
+                'sign up',
+                style: TextStyle(color: Colors.black),
+              ),
+              style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.red),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10))),
+                  minimumSize: MaterialStateProperty.all(Size(350, 50))),
             ),
-            style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.red),
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10))),
-                minimumSize: MaterialStateProperty.all(Size(350, 50))),
           )
         ],
       ),
