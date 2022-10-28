@@ -7,7 +7,8 @@ import 'package:project1/validation.dart';
 
 class signup extends StatelessWidget {
   var formkey=GlobalKey<FormState>();
-
+  TextEditingController pass=TextEditingController();
+  TextEditingController cpass=TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,6 +58,7 @@ class signup extends StatelessWidget {
                Padding(
                 padding: EdgeInsets.all(20.0),
                 child: TextFormField(
+                  controller: pass,
                   textInputAction: TextInputAction.next,
                   validator: (pass){
                     if(pass!.isEmpty||pass.length<6){
@@ -73,9 +75,10 @@ class signup extends StatelessWidget {
                Padding(
                 padding: EdgeInsets.all(20.0),
                 child: TextFormField(
+                  controller: cpass,
                   textInputAction: TextInputAction.next,
-                  validator: (pass){
-                    if(pass!.isEmpty||pass.length<6){
+                  validator: (password){
+                    if(password!.isEmpty ||  password.length<6 || pass.text !=cpass.text){
                       return 'password atleast contain 6';
                     }
                   },
@@ -92,16 +95,17 @@ class signup extends StatelessWidget {
                   if(valid){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>mainscreen()));
                   }else{
-                    Fluttertoast.showToast(
-                        msg: "invalid email or password",
-                        toastLength: Toast.LENGTH_SHORT,
-                        gravity: ToastGravity.BOTTOM,
-                        timeInSecForIosWeb: 1,
-                        backgroundColor: Colors.red,
-                        textColor: Colors.white,
-                        fontSize: 16.0
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: const Text('registration failed!'),
+                        action: SnackBarAction(
+                          label: 'undo',
+                          onPressed: () {
+                            // Code to execute.
+                          },
+                        ),
+                      ),
                     );
-
                   }
                 },
                 child: Text(
