@@ -9,6 +9,7 @@ import 'package:project1/entryscreen.dart';
 import 'package:project1/listviewbuilder.dart';
 import 'package:project1/listviewwithseperated.dart';
 import 'package:project1/mainscreen.dart';
+import 'package:project1/movies.dart';
 import 'package:project1/signup.dart';
 import 'package:project1/login.dart';
 import 'package:project1/validation.dart';
@@ -47,7 +48,7 @@ class _SplashState extends State<Splash> {
   void initState() {
     Timer(Duration(seconds: 5), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => entry()));
+          context, MaterialPageRoute(builder: (context) => Movies()));
     });
   }
 
