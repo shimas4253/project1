@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:project1/bottom.dart';
 import 'package:project1/mainscreen.dart';
 import 'package:project1/signup.dart';
 
@@ -68,7 +69,7 @@ class validation extends StatelessWidget {
                   onPressed: (){
   final valid=formkey.currentState!.validate();
   if(valid){
-    Navigator.push(context,MaterialPageRoute(builder: (context)=>mainscreen()));
+    Navigator.push(context,MaterialPageRoute(builder: (context)=>bottom()));
   }else{
     Fluttertoast.showToast(
         msg: "invalid email or password",
