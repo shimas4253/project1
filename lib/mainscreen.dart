@@ -57,11 +57,17 @@ class mainscreen extends StatelessWidget {
               ),
               title: Text('contact 2'),
               subtitle: Text('7994306463'),
-              trailing: Icon(
+              trailing: Wrap(
+                children: [
+                  Icon(Icons.sms,size: 25,color: Colors.blue),
+              SizedBox(width: 20),
+              Icon(
                 Icons.phone,
-                color: Colors.green,
+                color: Colors.blue,
                 size: 30,
               ),
+                ],
+            ),
             ),
           ),
           Card(
@@ -74,11 +80,17 @@ class mainscreen extends StatelessWidget {
               ),
               title: Text('contact 3'),
               subtitle: Text('7994306463'),
-              trailing: Icon(
+              trailing:Wrap(
+                children :[
+                  Icon(Icons.sms,size: 25,color: Colors.blue,),
+                SizedBox(width: 20),
+                Icon(
                 Icons.phone,
-                color: Colors.green,
+                color: Colors.blue,
                 size: 30,
               ),
+                ],
+            ),
             ),
           ),
           Card(
@@ -91,10 +103,17 @@ class mainscreen extends StatelessWidget {
               ),
               title: Text('contact 4'),
               subtitle: Text('7994306463'),
-              trailing: Icon(
-                Icons.phone,
-                color: Colors.green,
-                size: 30,
+              trailing: Wrap(
+                children:[
+                  Icon(Icons.sms,size: 25,color: Colors.blue),
+                  SizedBox(width: 20),
+
+                  Icon(
+                  Icons.phone,
+                  color: Colors.blue,
+                  size: 30,
+                ),
+              ],
               ),
             ),
           ),
@@ -108,10 +127,102 @@ class mainscreen extends StatelessWidget {
               ),
               title: Text('contact 5'),
               subtitle: Text('7994306463'),
-              trailing: Icon(
-                Icons.phone,
-                color: Colors.green,
-                size: 30,
+              trailing: Wrap(
+                children: [Icon(Icons.sms,size: 25,color: Colors.blue,),
+                  SizedBox(width: 20,),
+                  Icon(
+                  Icons.phone,
+                  color: Colors.blue,
+                  size: 30,
+                ),
+              ],
+              ),
+            ),
+          ),
+          Card(
+            child: ListTile(
+              leading: CircleAvatar(
+                child: Icon(
+                  Icons.contacts,
+                ),
+                radius: 30,
+              ),
+              title: Text('contact 6'),
+              subtitle: Text('7994306463'),
+              trailing: Wrap(
+                children: [
+                  Icon(
+                    Icons.sms,
+                    size: 25,
+                    color: Colors.blue,
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Icon(
+                    Icons.phone,
+                    size: 25,
+                    color: Colors.blue,
+                  )
+                ],
+              ),
+            ),
+          ),
+          Card(
+            child: ListTile(
+              leading: CircleAvatar(
+                child: Icon(
+                  Icons.contacts,
+                ),
+                radius: 30,
+              ),
+              title: Text('contact 7'),
+              subtitle: Text('7994306463'),
+              trailing: Wrap(
+                children: [
+                  Icon(
+                    Icons.sms,
+                    size: 25,
+                    color: Colors.blue,
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Icon(
+                    Icons.phone,
+                    size: 25,
+                    color: Colors.blue,
+                  )
+                ],
+              ),
+            ),
+          ),
+          Card(
+            child: ListTile(
+              leading: CircleAvatar(
+                child: Icon(
+                  Icons.contacts,
+                ),
+                radius: 30,
+              ),
+              title: Text('contact 8'),
+              subtitle: Text('7994306463'),
+              trailing: Wrap(
+                children: [
+                  Icon(
+                    Icons.sms,
+                    size: 25,
+                    color: Colors.blue,
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Icon(
+                    Icons.phone,
+                    size: 25,
+                    color: Colors.blue,
+                  )
+                ],
               ),
             ),
           )
