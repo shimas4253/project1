@@ -14,7 +14,7 @@ class calls extends StatelessWidget {
           ),
           title: Text('Name'),
           subtitle: Text('date,time'),
-          trailing: Icon(Icons.video_call),
+          trailing: Icon(Icons.videocam),
 
         );
       },
