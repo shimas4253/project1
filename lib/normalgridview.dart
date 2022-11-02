@@ -35,13 +35,17 @@ class normalgrid extends StatelessWidget {
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3, mainAxisSpacing: 20, crossAxisSpacing: 20,),shrinkWrap:false,
         children: [
-          Card(elevation: 30,
+          Column(
+            children: [
+              Card(elevation: 30,
 
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.only(topLeft: Radius.circular(20),bottomRight: Radius.circular(20)),
-            ),
-            child: Image(image: NetworkImage(movie[0])),
-            shadowColor: Colors.red,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(topLeft: Radius.circular(20),bottomRight: Radius.circular(20)),
+                ),
+                child: Image(image: NetworkImage(movie[0])),
+              ),
+              Text('Movie 1'),
+            ],
           ),
           Card(elevation: 30,
             shape: RoundedRectangleBorder(

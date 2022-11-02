@@ -3,6 +3,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 
 import 'package:flutter/material.dart';
+import 'package:project1/Gridviewcustom.dart';
 import 'package:project1/bottom.dart';
 import 'package:project1/cardhome.dart';
 import 'package:project1/entryscreen.dart';
@@ -14,6 +15,7 @@ import 'package:project1/movies.dart';
 import 'package:project1/normalgridview.dart';
 import 'package:project1/signup.dart';
 import 'package:project1/login.dart';
+import 'package:project1/stack.dart';
 import 'package:project1/validation.dart';
 import 'package:project1/whatsuppui.dart';
 
@@ -51,7 +53,7 @@ class _SplashState extends State<Splash> {
   void initState() {
     Timer(Duration(seconds: 5), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => normalgrid()));
+          context, MaterialPageRoute(builder: (context) => stack()));
     });
   }
 
