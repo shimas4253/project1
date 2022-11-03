@@ -17,6 +17,7 @@ import 'package:project1/profile.dart';
 import 'package:project1/signup.dart';
 import 'package:project1/login.dart';
 import 'package:project1/stack.dart';
+import 'package:project1/staggerdassi.dart';
 import 'package:project1/staggerdgridview.dart';
 import 'package:project1/tabl.dart';
 import 'package:project1/validation.dart';
@@ -56,7 +57,7 @@ class _SplashState extends State<Splash> {
   void initState() {
     Timer(Duration(seconds: 5), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => tables()));
+          context, MaterialPageRoute(builder: (context) => google()));
     });
   }
 
