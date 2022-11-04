@@ -7,6 +7,7 @@ import 'package:project1/Gridviewcustom.dart';
 import 'package:project1/bottom.dart';
 import 'package:project1/cardhome.dart';
 import 'package:project1/entryscreen.dart';
+import 'package:project1/fixedappbar.dart';
 import 'package:project1/gridview.dart';
 import 'package:project1/listviewbuilder.dart';
 import 'package:project1/listviewwithseperated.dart';
@@ -19,6 +20,7 @@ import 'package:project1/login.dart';
 import 'package:project1/stack.dart';
 import 'package:project1/staggerdassi.dart';
 import 'package:project1/staggerdgridview.dart';
+import 'package:project1/tabbar.dart';
 import 'package:project1/tabl.dart';
 import 'package:project1/validation.dart';
 import 'package:project1/whatsuppui.dart';
@@ -57,7 +59,7 @@ class _SplashState extends State<Splash> {
   void initState() {
     Timer(Duration(seconds: 5), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => google()));
+          context, MaterialPageRoute(builder: (context) => fixe()));
     });
   }
 

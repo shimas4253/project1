@@ -5,6 +5,7 @@ class profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.cyan.withOpacity(0.1),
           leading: Icon(Icons.menu),
           actions: [
             Icon(Icons.more_vert),
@@ -19,6 +20,7 @@ class profile extends StatelessWidget {
               Image(
                   image: NetworkImage(
                       'https://tmssl.akamaized.net/images/foto/galerie/david-beckham-manchester-united-1588407300-37505.jpg?lm=1588407315')),
+           
               Positioned(
                 left: 50,
                 right: 50,
