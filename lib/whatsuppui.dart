@@ -11,7 +11,7 @@ class whatsupp extends StatefulWidget {
 }
 
 class _whatsuppState extends State<whatsupp> {
-  var page=[Camara(),chat(),status(),calls()];
+  var page = [Camara(), chat(), status(), calls()];
   var selectindex = 0;
 
   void onitemtap(int index) {
@@ -24,17 +24,14 @@ class _whatsuppState extends State<whatsupp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions:
-        [Icon(Icons.search),
-        Icon(Icons.more_vert)],
+        actions: [Icon(Icons.search), Icon(Icons.more_vert)],
         backgroundColor: Colors.teal,
         title: Text(
           "Whatsup",
           style: TextStyle(color: Colors.white),
         ),
       ),
-      body:page.elementAt(selectindex),
-
+      body: page.elementAt(selectindex),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.white,
@@ -49,15 +46,21 @@ class _whatsuppState extends State<whatsupp> {
                 Icons.camera_alt,
               ))),
           BottomNavigationBarItem(
-              icon: Icon(
-                Icons.chat,
-              ),
-              label: 'Chats',),
-          BottomNavigationBarItem(icon: Icon(Icons.history,),
-          label: 'Status'
+            icon: Icon(
+              Icons.chat,
+            ),
+            label: 'Chats',
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.call,),
-          label: 'Call')
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.history,
+              ),
+              label: 'Status'),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.call,
+              ),
+              label: 'Call')
         ],
       ),
     );

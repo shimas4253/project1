@@ -28,11 +28,12 @@ import 'package:project1/whatsuppui.dart';
 void main() {
   runApp(
     DevicePreview(
-    enabled: !kReleaseMode,
-    builder: (context) => MyApp(), // Wrap your app
-  ),
+      enabled: !kReleaseMode,
+      builder: (context) => MyApp(), // Wrap your app
+    ),
   );
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -59,7 +60,7 @@ class _SplashState extends State<Splash> {
   void initState() {
     Timer(Duration(seconds: 5), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => fixe()));
+          context, MaterialPageRoute(builder: (context) => whatsupp()));
     });
   }
 
@@ -70,15 +71,18 @@ class _SplashState extends State<Splash> {
         decoration: const BoxDecoration(
             image: DecorationImage(
           fit: BoxFit.fill,
-          image: AssetImage(
-              "assets/images/backgroundimage.jpg"),
+          image: AssetImage("assets/images/backgroundimage.jpg"),
         )),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
               // Image.asset('assets/images/phone.png'),//fetching image
-              Image(image: AssetImage('assets/images/study.png'),height: 50,width: 50,),
+              Image(
+                image: AssetImage('assets/images/study.png'),
+                height: 50,
+                width: 50,
+              ),
               Text(
                 'Myapp',
                 style: TextStyle(fontSize: 40, color: Colors.black),
