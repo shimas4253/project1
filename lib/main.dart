@@ -7,6 +7,7 @@ import 'package:project1/Gridviewcustom.dart';
 import 'package:project1/bottom.dart';
 import 'package:project1/cardhome.dart';
 import 'package:project1/checkbox.dart';
+import 'package:project1/checkboxdemo.dart';
 import 'package:project1/entryscreen.dart';
 import 'package:project1/expansiontail.dart';
 import 'package:project1/fixedappbar.dart';
@@ -66,7 +67,7 @@ class _SplashState extends State<Splash> {
   void initState() {
     Timer(Duration(seconds: 5), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => inkwell()));
+          context, MaterialPageRoute(builder: (context) => demo()));
     });
   }
 
