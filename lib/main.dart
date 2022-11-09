@@ -11,6 +11,8 @@ import 'package:project1/entryscreen.dart';
 import 'package:project1/expansiontail.dart';
 import 'package:project1/fixedappbar.dart';
 import 'package:project1/gridview.dart';
+import 'package:project1/homepage.dart';
+import 'package:project1/homepage1.dart';
 import 'package:project1/listviewbuilder.dart';
 import 'package:project1/listviewwithseperated.dart';
 import 'package:project1/lottie.dart';
@@ -62,8 +64,7 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     Timer(Duration(seconds: 5), () {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => expntail()));
+      Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>entry()));
     });
   }
 
