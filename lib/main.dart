@@ -5,7 +5,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:project1/Gridviewcustom.dart';
 import 'package:project1/bottom.dart';
+import 'package:project1/bottomsheet.dart';
 import 'package:project1/cardhome.dart';
+import 'package:project1/carousslider.dart';
 import 'package:project1/checkbox.dart';
 import 'package:project1/checkboxdemo.dart';
 import 'package:project1/entryscreen.dart';
@@ -22,6 +24,7 @@ import 'package:project1/mainscreen.dart';
 import 'package:project1/movies.dart';
 import 'package:project1/normalgridview.dart';
 import 'package:project1/profile.dart';
+import 'package:project1/room.dart';
 import 'package:project1/signup.dart';
 import 'package:project1/login.dart';
 import 'package:project1/stack.dart';
@@ -67,7 +70,7 @@ class _SplashState extends State<Splash> {
   void initState() {
     Timer(Duration(seconds: 5), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => demo()));
+          context, MaterialPageRoute(builder: (context) => sheet()));
     });
   }
 
