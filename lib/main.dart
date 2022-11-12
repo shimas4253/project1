@@ -70,7 +70,7 @@ class _SplashState extends State<Splash> {
   void initState() {
     Timer(Duration(seconds: 5), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => sheet()));
+          context, MaterialPageRoute(builder: (context) => room()));
     });
   }
 
