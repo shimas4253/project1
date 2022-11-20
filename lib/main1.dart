@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:project1/productscreen.dart';
 import 'package:project1/singleproductlist.dart';
 
+import 'entrypage.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: product(),
+      home: productslist(),
       routes: {'product list': (context) => productscreen()},
     );
   }
