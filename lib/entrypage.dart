@@ -7,7 +7,7 @@ List<Map<String, dynamic>> productsl = [
     'price': 100,
     'description': 'this is a Earphone 1',
     'image':
-        'https://m.economictimes.com/thumb/msid-92696630,width-1200,height-900,resizemode-4,imgsize-17674/best-earphones-with-mic-under-3000.jpg'
+        'https://www.pngitem.com/pimgs/m/99-994929_mobile-earphone-png-transparent-earphone-png-png-download.png'
   },
   {
     'Id': 2,
@@ -48,21 +48,32 @@ class productslist extends StatelessWidget {
               SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
           children: productsl.map((values) {
             return GestureDetector(
-              child: Container(
+              onTap: () {
+                Navigator.of(context)
+                    .pushNamed('product detail', arguments: values['Id']);
+              },
+              child: Card(
                 child: Column(
                   children: [
                     Container(
-                        height: 200,
-                        width: 200,
+                        height: 150,
                         decoration: BoxDecoration(
                             image: DecorationImage(
                                 image: NetworkImage(values['image']),
                                 fit: BoxFit.fill))),
-                    Text(
-                      values['name'],
-                      style: TextStyle(fontSize: 20),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 1, right: 90),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            values['name'],
+                            style: TextStyle(fontSize: 20),
+                          ),
+                          Text(values['price'].toString())
+                        ],
+                      ),
                     ),
-                    Text(values['price'].toString())
                   ],
                 ),
               ),
